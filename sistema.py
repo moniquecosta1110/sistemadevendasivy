@@ -3,20 +3,11 @@
 # Streamlit -- para criar a interface web
 # pandas -- para analise de dados
 # Plotly -- para gráficos interativos
-# pip install streamlit Pandas Plotly
-
-    
-
-
-    # Tabela com as vendas cadastradas
-        # Colunas: Data, Vendedor, Quantidade, Valor
-
-    
+# pip install streamlit Pandas Plotly  
 
 import streamlit as st
 import pandas as pd 
 import plotly.express as px
-
 
 # streamlit run sistema.py
 #st.title("Usar para por nome do sistema barra de pesquisa")
@@ -27,25 +18,21 @@ st.write("# Sistema de Vendas") # nome do sistema
 # carregar a base de dados de vendas
 tabela_vendas = pd.read_csv("vendas.csv") # extraindo a base de dados do arquivo vendas.csv
 
-st.write("## Cadastrar Vendas") # nome da seção de cadastro de vendas
-
 # Seção Cadastrar Vendas
 
-st.sidebar.write("## Cadastrar Vendas") # nome da seção de cadastro de vendas na barra lateral
 # Campo Data"
+st.sidebar.write("## Cadastrar Venda") # mostrar o título da seção de cadastro de vendas
 data = st.sidebar.date_input("Data") # campo para selecionar a data da venda
 # Campo Vendedor - Ana, Bruno, Carla
-st.sidebar.selectbox(" Vendedor", ["Ana", "Bruno", "Carla"]) # campo para selecionar o vendedor
-vendedor = st.selectbox("Vendedor", ["Ana", "Bruno", "Carla"]) # campo para selecionar o vendedor
+vendedor = st.sidebar.selectbox("Vendedor", ["Ana", "Bruno", "Carla"]) # campo para selecionar o vendedor
 # campo Produto - Celular, Notbook, Fone de Ouvido
-st.sidebar.selectbox("Produto", ["Celular", "Notebook", "Fone de Ouvido"]) # campo para selecionar o produto
-produto = st.selectbox("Produto", ["Celular", "Notebook", "Fone de Ouvido"]) # campo para selecionar o produto
+produto = st.sidebar.selectbox("Produto", ["Celular", "Notebook", "Fone de Ouvido"]) # campo para selecionar o produto
 # Campo Quantidade
-st.sidebar.selectbox("Quantidade", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) # campo para selecionar a quantidade de produtos
-quantidade = st.selectbox("Quantidade", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) # campo para selecionar a quantidade de produtos
+quantidade = st.sidebar.selectbox("Quantidade", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) # campo para selecionar a quantidade de produtos
 # Campo Valor
-st.sidebar.selectbox("Valor", [000.00, 100.00, 200.00, 300.00, 400.00]) # campo para selecionar o valor do produto
-valor = st.selectbox("Valor", [000.00, 100.00, 200.00, 300.00, 400.00]) # campo para selecionar o valor do produto
+valor = st.sidebar.selectbox("Valor", [000.00,10.00, 15.00, 20.00, 25.00, 30.00,
+                                        35.00, 40.00, 45.00, 50.00, 55.00, 60.00, 65.00, 70.00, 75.00, 80.00, 85.00, 90.00, 95.00,
+                                          100.00, 150.00, 200.00, 250.00, 300.00, 350.00, 400.00]) # campo para selecionar o valor do produto
 # Botão Cadastrar Venda
 botao_cadastrar = st.sidebar.button("Cadastrar Venda") # botão para cadastrar a venda
 
