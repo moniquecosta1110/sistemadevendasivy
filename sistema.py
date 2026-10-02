@@ -41,11 +41,11 @@ vendedor = st.selectbox("Vendedor", ["Ana", "Bruno", "Carla"]) # campo para sele
 st.sidebar.selectbox("Produto", ["Celular", "Notebook", "Fone de Ouvido"]) # campo para selecionar o produto
 produto = st.selectbox("Produto", ["Celular", "Notebook", "Fone de Ouvido"]) # campo para selecionar o produto
 # Campo Quantidade
-st.sidebar.selectbox("Quantidade", [1, 2, 3, 4, 5]) # campo para selecionar a quantidade de produtos
-quantidade = st.selectbox("Quantidade", [1, 2, 3, 4, 5]) # campo para selecionar a quantidade de produtos
+st.sidebar.selectbox("Quantidade", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) # campo para selecionar a quantidade de produtos
+quantidade = st.selectbox("Quantidade", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) # campo para selecionar a quantidade de produtos
 # Campo Valor
-st.sidebar.selectbox("Valor", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0]) # campo para selecionar o valor do produto
-valor = st.selectbox("Valor", [0.0, 1.0, 2.0, 3.0, 4.0, 5.0]) # campo para selecionar o valor do produto
+st.sidebar.selectbox("Valor", [000.00, 100.00, 200.00, 300.00, 400.00]) # campo para selecionar o valor do produto
+valor = st.selectbox("Valor", [000.00, 100.00, 200.00, 300.00, 400.00]) # campo para selecionar o valor do produto
 # Botão Cadastrar Venda
 botao_cadastrar = st.sidebar.button("Cadastrar Venda") # botão para cadastrar a venda
 
